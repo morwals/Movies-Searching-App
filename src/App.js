@@ -11,7 +11,7 @@ export default function App() {
 
   async function getMovies() {
     const movieData = await fetch(
-      "http://www.omdbapi.com/?s=" + Search + "&apikey=56e7f9dc"
+      "http://www.omdbapi.com/?s=" + Search + "&apikey=APIKEY"
     );
     return movieData.json();
   }
