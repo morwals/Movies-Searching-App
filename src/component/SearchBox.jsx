@@ -1,7 +1,6 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import React from 'react';
-import { blue } from "@mui/material/colors";
 
 export default function SearchBox(props) {
   return(
@@ -32,7 +31,7 @@ export default function SearchBox(props) {
         />
         <hr></hr>
         <Button variant="contained" type="submit">
-          Show Movies
+          Search
         </Button>
       </form>
   </div>
