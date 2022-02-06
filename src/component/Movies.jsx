@@ -7,7 +7,7 @@ export default function Movies(props) {
             <div  className='div' key={i}
                 onClick={()=>props.setItem(movie)}
             >
-                <image src={movie.Poster} alt='image..'></image>
+                <img src={movie.Poster} alt='image..'></img>
             </div>
       )}
   </div>;

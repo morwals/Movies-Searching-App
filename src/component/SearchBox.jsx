@@ -26,6 +26,7 @@ export default function SearchBox(props) {
           value={props.Search}
           onChange={(e) => {
             props.setSearch(e.target.value);
+            console.log(e.target.value)
           }}
           required
         />

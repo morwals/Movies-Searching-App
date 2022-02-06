@@ -12,7 +12,7 @@ export default function MovieDetails(props) {
     <div>
       <div className="m-details">
         <div>
-          <image src={props.item.Poster} alt="image.."></image>
+          <img src={props.item.Poster} alt="image.."></img>
         </div>
         <div className="table">
           <TableContainer component={Paper}>

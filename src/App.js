@@ -11,7 +11,7 @@ export default function App() {
 
   async function getMovies() {
     const movieData = await fetch(
-      "https://www.omdbapi.com/?s=" + Search + "&apikey={api key}"
+      "https://www.omdbapi.com/?s=" + Search + "&apikey=56e7f9dc"
     );
     return movieData.json();
   }
@@ -28,33 +28,31 @@ export default function App() {
 
   return (
     <>
-    
-    <h1>Movies Search App</h1>
-    <div className="container">
-
-      <div className="card">
-        {item ? (
-          <div className="table">
-            <button onClick={() => setItem("")}>x</button>
-            <MovieDetails item={item}></MovieDetails>
-          </div>
-        ) : (
-          <SearchBox
-          setMovies={setMovies}
-          getMovies={getMovies}
-          setShow={setShow}
-          setSearch={setSearch}
-          Search={Search}
-          ></SearchBox>
+      <h1>Movies Search App</h1>
+      <div className="container">
+        <div className="card">
+          {item ? (
+            <div className="table">
+              <button onClick={() => setItem("")}>x</button>
+              <MovieDetails item={item}></MovieDetails>
+            </div>
+          ) : (
+            <SearchBox
+              setMovies={setMovies}
+              getMovies={getMovies}
+              setShow={setShow}
+              setSearch={setSearch}
+              Search={Search}
+            ></SearchBox>
           )}
 
-        {show && !item ? (
-          <div className="row">
-            <Movies movies={movies} setItem={setItem}></Movies>
-          </div>
-        ) : null}
+          {show && !item ? (
+            <div className="content">
+              <Movies movies={movies} setItem={setItem}></Movies>
+            </div>
+          ) : null}
+        </div>
       </div>
-    </div>
-</>
+    </>
   );
 }
